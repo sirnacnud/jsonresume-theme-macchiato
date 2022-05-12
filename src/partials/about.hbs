@@ -4,7 +4,7 @@
 
     {{#if location}}
         {{#location}}
-        {{> info-tag text=(formatAddress address city region postalCode countryCode) icon="fa-map-marker"}}
+        {{> info-tag text=(formatAddress address postalCode city region countryCode) icon="fa-map-marker"}}
         {{/location}}
     {{/if}}
 
@@ -22,6 +22,10 @@
 
     {{#if website}}
         {{> info-tag text=this.website icon="fa-globe" url=this.website}}
+    {{/if}}
+
+    {{#if nationality}}
+        {{> info-tag text=this.nationality}}
     {{/if}}
 
     {{#if profiles}}
